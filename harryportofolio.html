@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classy Portfolio</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+        /* Reset Styles */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        html{
+          scroll-behavior: smooth;
+        }
+        
+        
+        /* Global Styles */
+        body {
+         
+          font-family: 'Times New Roman', Times, serif;
+          background-color: #3AAFA9; /* Light Gray */
+          color: #333;
+        }
+        body {
+  font-family: "Poppins", sans-serif;
+}
+
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+        nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.0rem;
+}
+
+
+
+.logo {
+  font-size: 2rem;
+  margin-right: 300px;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+
+        /* Header Styles */
+        header {
+          text-decoration: none; 
+          position: fixed;  
+          top: 0;  
+          left: 0;  
+          width: 100%; 
+          padding: 0rem 7%; 
+          background: #17252A; 
+          display: flex; 
+          
+          
+        }
+/*
+        nav ul {
+          list-style: none;
+        }
+
+        nav ul li {
+          display: inline;
+          margin-right: 20px;
+        }
+
+        nav ul li a {
+          text-decoration: none;
+          color: #fff;
+        }
+        /* Main Content Styles */
+        .main-content {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 10px;
+        }
+
+        .content {
+          flex: 1;
+        }
+
+        .hero h2 {
+          font-size: 3em;
+          font-style: italic;
+          margin-bottom: 20px;
+        }
+
+        .hero p {
+          font-size: 1.2em;
+          margin-bottom: 20px;
+        }
+        .titles{
+          font-size: 2em;
+          
+          margin-bottom: 10px;
+        }
+
+        a {
+          color: #fff;
+          text-transform: uppercase;
+          text-decoration: none;
+          letter-spacing: 0.10em;
+          display: inline-block;
+          padding: 10px 20px;
+          position: relative;
+        }
+
+        a:after {    
+          background: none repeat scroll 0 0 transparent;
+          bottom: 0;
+          content: "";
+          display: block;
+          height: 2px;
+          left: 50%;
+          position: absolute;
+          background: #fff;
+          transition: width 0.3s ease 0s, left 0.3s ease 0s;
+          width: 0;
+        }
+        .about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+        a:hover:after { 
+          width: 100%; 
+          left: 0; 
+        }
+        .btn-container{
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+        }
+        .btn{
+          font-weight: 600;
+          transition: all 300ms ease;
+          padding: 1rem;
+          width: 8rem;
+          border-radius: 2rem;
+        }
+        .btn-color-1,
+        .btn-color-2{
+          border: rgb(53,53,53) 0.1rem solid;
+        }
+        .btn-color-1:hover,
+        .btn-color-2:hover{
+          cursor: pointer;
+        }
+        .btn-color-1,
+        .btn-color-2:hover{
+          background-color: rgb(53,53,53);
+          color: white;
+        }
+        .btn-color-1:hover{
+          background-color: rgb(0,0,0);
+        }
+        .btn-color-2{
+          background: none;
+        }
+        .btn-color-2:hover{
+          border: rgb(255,255,255) 0.1rem solid;
+        }
+        .btn-container{
+          gap: 1rem;
+        }
+        /*
+        .btn {
+          background-color: #DEF2F1;
+          color: #3AAFA9;
+          padding: 10px 10px;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: all 300ms ease;
+        }*/
+
+        a:hover {
+          color: #fff;
+        }
+
+        /* Footer Styles */
+        footer {
+          background-color: #17252A;
+          color: #fff;
+          text-align: center;
+          padding: 20px 0;
+        }
+
+        /* Photo Styles */
+        .photo {
+          flex: 1;
+          background-image: url('photo.jpg');
+          
+          background-position: center;
+          height: 100vh;
+          
+          margin-top: 20px;
+        }
+
+        /* Skills Section Styles */
+        #skills {
+          background-color: #3AAFA9;
+          padding: 50px 0;
+        }
+
+        #skills .container {
+          text-align: left;
+        }
+
+        #skills h2 {
+          margin-bottom: 20px;
+        }
+
+        #skills .skill-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+        }
+        #skills .skill-list1{
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+        }
+        #skills .skill-list2 {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+        }
+        #skills .skill-list0{
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+        }
+
+        #skills .skill-list li {
+          margin: 0 10px 10px 0;
+          padding: 10px 20px;
+          background-color: #318a87;
+          color: #fff;
+          border-radius: 5px;
+        }
+        #skills .skill-list1 li{
+          margin: 0 10px 10px 0;
+          padding: 10px 20px;
+          background-color: #318a87;
+          color: #fff;
+          border-radius: 5px;
+        }
+        #skills .skill-list0 li {
+          margin: 0 10px 10px 0;
+          padding: 10px 20px;
+          background-color: #318a87;
+          color: #fff;
+          border-radius: 5px;
+        }
+        #skills .skill-list2 li{
+          margin: 0 10px 10px 0;
+          padding: 10px 20px;
+          background-color: #318a87;
+          color: #fff;
+          border-radius: 5px;
+        }
+
+        /* Contact Section Styles */
+        #contact {
+          background-color: #3AAFA9;
+          padding: 50px 0;
+          text-align: left;
+          font-size: 1rem;
+          
+        }
+
+        #contact h2 {
+          margin-bottom: 20px;
+        }
+
+        #contact form {
+          display: flex;
+          flex-direction: column;
+          align-items: normal;
+          
+        }
+
+        #contact form label {
+          margin-bottom: 10px;
+        }
+
+        #contact form input[type="text"],
+        #contact form input[type="email"],
+        #contact form input[type="tel"] {
+          font-family: "Poppins", sans-serif;
+          font-style: normal;
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          border: 1px solid #333;
+        }
+        #about h1{
+          background-color: #318a87;
+          margin-bottom: 20px;
+        }
+
+        #contact form button[type="submit"] {
+          background-color: #3AAFA9;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        #contact form button[type="submit"]:hover {
+          background-color: #17252A;
+        }
+
+        #contact .social-links {
+          margin-top: 20px;
+        }
+
+        #contact .social-links a {
+          margin-right: 10px;
+          color: #333;
+          text-decoration: none;
+        }
+
+        #contact .social-links a:hover {
+          color: #DEF2F1;
+        }
+        form {
+            max-width: 600px;
+            font-family: "Poppins", sans-serif;
+          font-style: normal;
+          font-size: 1em;
+            margin: 20px auto;
+            color: #fff;
+            background-color: #17252A; ;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: left;
+        }
+        .section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 4.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+        .social-links a {
+              
+            margin: 0 70px;
+            text-align: center;
+            font-style: normal;
+            text-decoration: none;
+            color: #41a4b3;
+            font-size: 15px;
+        }
+
+        .social-links a:hover {
+            background-color: transparent;
+            color: #dadde2;
+            transition: none;
+            
+            
+        }
+        .social-links a:after{
+          transition: none;
+        }
+        .project-container {
+            margin: 20px 0;
+        }
+
+        .project {
+            display: flex;
+            align-items: center;
+            background-color: rgb(199, 216, 216);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .project img {
+            max-width: 30%;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .project-text {
+            flex: 1;
+        }
+
+    </style>
+</head>
+<body>
+  <section id="home">
+  <!-- New Header with Links -->
+  <header>
+    <nav id="desktop-nav">
+      <div class="logo">
+      <a href='#home'>ABHINAV</a></div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Existing Header with Navigation Links -->
+  
+  <div class="main-content">
+    <div class="content">
+      <div class="section_text">
+        <p class="section_text_p1"><h2>hello, I'm</h2></p>
+        <h1 class="title">Abhinav Srivastava</h1>
+        <p class="section_text_p2"><h2>a Computer Science student</h2></p>
+      </div>
+      <div class="hero">
+        <div class="container">
+          <h2 class="block-effect" style="--td: 1.2s">
+            
+            <!--<div>Hi, I am </div>
+            <div>Abhinav Srivastava</div>
+          </h2>
+          <p>Showcasing my work and expertise</p>-->
+          <button class="btn btn-color-2" onclick="q=window.open('')">Resume</button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact</button>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="photo" style="text-align: right; margin-top: 130px; margin-right: 50px;">
+      <!-- Insert GIF here -->
+      <img src="https://d6f6d0kpz0gyr.cloudfront.net/uploads/images-archive/Blog/Gifs/computers.gif" alt="Your GIF" style="max-width: 100%; height: 70%;">
+    </div>
+  </div>
+</section>
+  <!-- About Section -->
+  <section id="about">
+    
+    <div class="container">
+      <div class="titles">
+        
+      <h2>About Me</h2>
+    </div>
+      <p>
+        I have successfully completed my 10+2 education at GD Goenka Public School in Lucknow, showcasing a solid academic foundation.
+        At present, I find myself in the second year, actively immersed in pursuing a comprehensive degree in Computer Science at VIT Vellore.
+        Beyond my academic pursuits, I have fervently participated in various cultural activities, notably achieving success by securing a victory
+        in the Model United Nations (MUN) competition held within the confines of my school. Additionally, I actively contributed to the school's
+        cricket team, demonstrating not only my academic prowess but also my prowess in sports.
+      </p>
+      <p>
+        As I find myself in the midst of my fourth semester at VIT Vellore, I continue to remain deeply engaged in extracurricular activities,
+        notably as an active member of the MUNSoc club. These experiences extend beyond the academic realm, providing a holistic and enriching
+        dimension to my educational journey. My involvement in diverse co-curricular pursuits reflects my commitment to a well-rounded education.
+    </p>
+
+    <p>
+        My educational philosophy is firmly grounded in dedication and an unwavering commitment to continuous learning. I am driven by a desire to
+        excel in various facets of technology, and I approach this endeavor with a strong work ethic. Embracing a mindset of continuous improvement,
+        I am dedicated to mastering the intricacies of diverse technological domains through persistent effort and a thirst for knowledge.
+    </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="titles">
+      <h2>Skills</h2>
+    </div>
+      
+      <ul class="skill-list">
+        <li>HTML</li>
+        <li>JAVA</li>
+        <li>CSS</li>
+        <li>JS</li>
+        
+
+      </ul>
+      <ul class="skill-list0">
+        
+        <li>Python</li>
+        <li>C</li>
+        <li>C++</li>
+
+      </ul>
+      <ul class ="skill-list1">
+        <li>C#</li>
+        <li>SQL</li>
+        <li>MongoDB</li>
+        <li>TensorFlow</li>
+        
+        
+      </ul>
+      <ul class ="skill-list2">
+        
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>React</li>
+        
+      </ul>
+    </div>
+  </section>
+  
+  <!-- Contact Section 
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contactForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" required>
+
+        <button type="submit">Submit</button>
+    </form> 
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/abhinav-srivastava-1084aa246/" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com/Abhinavv0008" target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/_abhinav82/" target="_blank">Instagram</a>
+        <a href="mailto:abhinavsrivastava0802@gmail.com">Gmail</a>
+      </div>
+    </div>
+  </section> -->
+
+  <!--Projects-->
+  <section id="projects">
+    <div class="container">
+      <div class="titles">
+        <h2>Projects</h2>
+      </div>
+      <div class="project-container">
+        <div class="project">
+            <img src="https://plaky.com/assets/images/web-assets/single-project.png" alt="Project 1">
+            <div class="project-text">
+                <h3>Project 1: Task Manager Application:</h3>
+                <p>Description: This project involves creating a task manager application to help users organize and keep track of their daily tasks...</p>
+                <p>Technologies Used: Python for backend logic, a web framework like Flask or Django for the web interface, and a database (SQLite or MongoDB) to store task information.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="https://www.codingnepalweb.com/wp-content/uploads/2023/06/Build-A-Weather-App-in-HTML-CSS-and-JavaScript-Weather-App-Project-HTML-CSS-and-JavaScript.png" alt="Project 2">
+            <div class="project-text">
+                <h3>Project 2: Weather App:</h3>
+                <p>Description: This project involves creating a simple weather application that fetches real-time weather data for a given location...</p>
+                <p>Technologies Used: HTML/CSS for the frontend, JavaScript for dynamic content and API calls (using a weather API), and potentially a backend server to handle user preferences.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="https://i.pinimg.com/originals/1a/c9/93/1ac993dd4209a445440dcef678cffc64.png" alt="Project 3">
+            <div class="project-text">
+                <h3>Project 3: Personal Portfolio Website:</h3>
+                <p>Description: A personal portfolio website is a great project to showcase a student's skills, projects, and achievements...</p>
+                <p>Technologies Used: HTML for structuring the content, CSS for styling, and JavaScript for interactivity. A web framework like React or Vue.js could also be used for a more dynamic single-page application.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="container">
+      <div class="titles">
+        <h2>Contact Me</h2>
+        </div>
+        <form id="contactForm" onsubmit="return validateForm()">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="contact">Contact Number:</label>
+          <input type="tel" id="contact" name="contact" required>
+
+          <button type="submit">Submit</button>
+      </form>
+      </div>
+    </div>
+  </section>
+  <footer>
+    
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/abhinav-srivastava-1084aa246/" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com/Abhinavv0008" target="_blank">Twitter</a>
+      <a href="https://www.instagram.com/_abhinav82/" target="_blank">Instagram</a>
+      <a href="mailto:abhinavsrivastava0802@gmail.com">Gmail</a>
+      <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
